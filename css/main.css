@@ -1,0 +1,94 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  /* 부모 요소 값 따라가라 */
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* 요소들이 옆으로 안 붙고 밑으로 내려감 */
+}
+.tablist {
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
+  border: 1px solid rgba(192, 71, 71, 0.12);
+}
+.tab {
+  line-height: 60px;
+  font-weight: 800;
+  padding: 0 15px;
+  position: relative;
+  display: block;
+}
+.tab.selected::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  bottom: 10px;
+  height: 5px;
+  background-color: rgb(118, 42, 206);
+}
+.row_wrap {
+  width: 400px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+.row {
+  display: flex;
+  padding: 10px 0;
+  text-align: center;
+  /* align-items: center; */
+}
+.row input {
+  background-color: rgb(243, 235, 235);
+}
+.row input:focus {
+  outline: none;
+}
+.txtfield.big {
+  height: 150px;
+}
+.title_content {
+  display: flex;
+  align-items: center;
+  /* 박스 옆에 글자가 중간으로 내려옴 */
+  width: 100px;
+  /* 글자 옆으로 지저분하게 안 붙고 두줄로 channel, keyword로 나뉨 */
+  height: 40px;
+  font-weight: bold;
+}
+.txtfield {
+  width: 300px;
+  height: 30px;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.map_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+footer {
+  height: 100px;
+  background-color: rgb(145, 145, 145);
+  line-height: 100px;
+  padding: 0 10px;
+  margin-top: auto;
+  /* 마진-탑 오토하면 바디가 줄여도 푸터가 바닥에 딱 고정되어있음 */
+}
